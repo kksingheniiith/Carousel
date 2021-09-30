@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+/* .image-container {
+    height: 500px;
+    width: 500px;
+} */
+.carousel-container {
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
+}
+.carousel-container .carousel-item, .carousel-container .carousel-item-hidden{
+    display: none;
+}
+.carousel-container .carousel-item img {
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+.carousel-container .carousel-item-visible {
+    display: block;
+    animation: next 0.5s;
+}
+
+@keyframes next {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+
+.carousel-container .carousel-actions {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.carousel-container button{
+    cursor: pointer;
+}
+
+#carousel-button-left {
+    margin-left: 15px;
+}
+
+#carousel-button-right {
+    margin-right: 15px;
+}
